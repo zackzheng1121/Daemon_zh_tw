@@ -1,0 +1,228 @@
+{
+  "app": {
+    "welcome": "歡迎使用 MCSManager 守護進程",
+    "instanceLoad": "所有應用實例已載入，總計 {{n}} 個",
+    "instanceLoadError": "讀取本地實例檔案失敗:",
+    "sessionConnect": "會話 {{ip}} {{uuid}} 已連線",
+    "sessionDisconnect": "會話 {{ip}} {{uuid}} 已斷開",
+    "started": "守護進程現已成功啟動",
+    "doc": "參考文檔：https://docs.mcsmanager.com/",
+    "addr": "訪問地址：http://<IP地址>:{{port}}/ 或 ws://<IP地址>:{{port}}",
+    "configPathTip": "配置文件：data/Config/global.json",
+    "password": "訪問密鑰：{{key}}",
+    "passwordTip": "密鑰作為唯一認證方式，請使用 MCSManager 面板的節點功能連接程序",
+    "exitTip": "你可以使用 Ctrl+C 快捷鍵即可關閉程序",
+    "sysinfo": "資源報告",
+    "httpSetupError": "HTTP/Socket 服務啟動錯誤，可能是端口被佔用，權限不足或網卡設備不可用。"
+  },
+  "common": {
+    "title": "標題",
+    "_7zip": "[7zip 壓縮任務]",
+    "_7unzip": "[7zip 解壓縮任務]",
+    "killProcess": "進程 {{pid}} 已使用系統指令強制終止進程",
+    "uuidIrregular": "UUID {{uuid}} 不符合規範"
+  },
+  "command": {
+    "quotes": "錯誤的命令雙引號，無法找到成對雙引號，如需使用單個雙引號請使用 {quotes} 符號",
+    "errLen": "錯誤的命令長度，請確保命令格式正確",
+    "instanceNotOpen": "命令執行失敗，因為實例實際進程不存在"
+  },
+  "instance": {
+    "dirEmpty": "啟動命令，輸入輸出編碼或工作目錄為空值",
+    "dirNoE": "工作目錄並不存在",
+    "invalidCpu": "非法的CPU核心指定 {{v}}",
+    "invalidContainerName": "非法的容器名 {{v}}",
+    "successful": "實例 {{v}} 啟動成功"
+  },
+  "start": {
+    "instanceNotDown": "實例未處於關閉狀態，無法再進行啟動",
+    "instanceMaturity": "實例使用到期時間已到，無法再啟動實例",
+    "startInstance": "正在準備啟動實例..."
+  },
+  "restart": {
+    "start": "重啟實例計劃開始執行",
+    "error1": "重啟實例狀態錯誤，實例已被啟動過，上次狀態的重啟計劃取消",
+    "error2": "重啟實例狀態錯誤，實例狀態應該為停止中狀態，現在變為正在運行，重啟計劃取消",
+    "restarting": "檢測到伺服器已停止，正在重啟實例..."
+  },
+  "general_start": {
+    "instanceConfigErr": "啟動命令，輸入輸出編碼或工作目錄為空值",
+    "cwdPathNotExist": "工作目錄並不存在",
+    "cmdEmpty": "無法啟動實例，啟動命令為空",
+    "startInstance": "會話 {{source}}: 請求開啟實例.",
+    "instanceUuid": "實例標識符: [{{uuid}}]",
+    "startCmd": "啟動命令: {{cmdList}}",
+    "cwd": "工作目錄: {{cwd}}",
+    "pidErr": "檢測到實例進程/容器啟動失敗（PID 為空），其可能的原因是：\n1. 實例啟動命令編寫錯誤，請前往實例設置界面檢查啟動命令與參數。\n2. 系統主機環境不正確或缺少環境，如Java 環境等。\n\n原生啟動命令：\n{{startCommand}}\n\n啟動命令解析體:\n程序：{{commandExeFile}}\n參數：{{commandParameters}}\n\n請將此信息報告給管理員，技術人員或自行排查故障。",
+"startErr": "實例啟動失敗，請檢查啟動命令，主機環境和配置文件等",
+"startSuccess": "實例 {{instanceUuid}} 成功啟動 PID: {{pid}}",
+"startOrdinaryTerminal": "應用實例已運行，您可以在底部的命令輸入框發送命令，如果您需要支持 Ctrl，Tab 等快捷鍵等高級控制台功能，請前往終端設置開啟仿真終端功能"
+},
+"general_stop": {
+"notRunning": "實例未處於運行中狀態，無法進行停止.",
+"execCmd": "已執行預設的關閉命令：{{stopCommand}}\n如果無法關閉實例請前往實例設置更改關閉實例的正確命令，比如 ^C，stop，end 等",
+"stopErr": "關閉命令已發出但長時間未能關閉實例，可能是實例關閉命令錯誤或實例進程假死導致，現在將恢復到運行中狀態，可使用強制終止指令結束進程。"
+},
+"general_update": {
+"statusErr_notStop": "實例狀態不正確，無法執行更新任務，必須停止實例",
+"statusErr_otherProgress": "實例狀態不正確，有其他任務正在運行中",
+"readyUpdate": "實例 {{instanceUuid}} 正在準備進行更新操作...",
+"updateCmd": "實例 {{instanceUuid}} 執行更新命令如下:",
+"cmdFormatErr": "更新命令格式錯誤，請聯繫管理員",
+"err": "錯誤",
+"updateFailed": "更新失敗，更新命令啟動失敗，請聯繫管理員",
+"update": "更新",
+"updateSuccess": "更新成功！",
+"updateErr": "更新程序結束，但結果不正確，可能文件更新損壞或網絡不暢通",
+"error": "更新錯誤: {{err}}",
+"terminateUpdate": "用戶請求終止實例 {{instanceUuid}} 的 update 異步任務",
+"killProcess": "正在強制殺死任務進程..."
+},
+"pty_start": {
+"cmdErr": "啟動命令，輸入輸出編碼或工作目錄為空值",
+"cwdNotExist": "工作目錄並不存在",
+"startPty": "會話 {{source}}: 請求開啟實例，模式為仿真終端",
+"startErr": "仿真終端模式失敗，可能是依賴程序不存在，已自動降級到普通終端模式...",
+"notSupportPty": "仿真終端模式失敗，無法支持的架構或系統，已自動降級到普通終端模式...",
+"cmdEmpty": "無法啟動實例，啟動命令為空",
+"sourceRequest": "會話 {{source}}: 請求開啟實例.",
+"instanceUuid": "實例標識符: [{{instanceUuid}}]",
+"startCmd": "啟動命令: {{cmd}}",
+"ptyPath": "PTY 路徑: {{path}}",
+"ptyParams": "PTY 參數: {{param}}",
+"ptyCwd": "工作目錄: {{cwd}}",
+"pidErr": "檢測到實例進程/容器啟動失敗（PID 為空），其可能的原因是：\n1. 實例啟動命令編寫錯誤，請前往實例設置界面檢查啟動命令與參數。\n2. 系統主機環境不正確或缺少環境，如 Java 環境等。\n\n原生啟動命令：\n{{startCommand}}\n\n仿真終端中轉命令:\n程序：{{path}}\n參數：{{params}}\n\n請將此信息報告給管理員，技術人員或自行排查故障。\n如果您認為是面板仿真終端導致的問題，請在左側終端設置中關閉“仿真終端”選項，我們將會採用原始輸入輸出流的方式監聽程序。",
+"instanceStartErr": "實例啟動失敗，請檢查啟動命令，主機環境和配置文件等",
+"startSuccess": "實例 {{instanceUuid}} 成功啟動 PID: {{pid}}",
+"startEmulatedTerminal": "仿真終端模式已生效，您可以直接在終端內直接輸入內容並使用 Ctrl，Tab 等功能鍵",
+"mustAbsolutePath": "仿真終端啟動工作目錄必須使用絕對路徑，請前往實例設置界面重新設置工作路徑為絕對路徑"
+},
+"pty_stop": {
+"notRunning": "實例未處於運行中狀態，無法進行停止.",
+"execCmd": "已執行預設的關閉命令：{{stopCommand}}\n如果無法關閉實例請前往實例設置更改關閉實例的正確命令，比如 exit，stop，end 等",
+"stopErr": "關閉命令已發出但長時間未能關閉實例，可能是實例關閉命令錯誤或實例進程假死導致，現在將恢復到運行中狀態，可使用強制終止指令結束進程。"
+},
+  "instanceConf": {
+    "initInstanceErr": "初始化實例失敗，唯一標識符或配置參數為空",
+    "cantModifyInstanceType": "正在運行時無法修改此實例類型",
+    "cantModifyProcessType": "正在運行時無法修改此實例進程類型",
+    "cantModifyPtyModel": "正在運行時無法修改PTY模式",
+    "ptyNotExist": "無法啟用仿真終端，因為 {{path}} 附屬程序不存在，您可以聯繫管理員重啟 Daemon 程序得以重新安裝（僅 Linux）",
+    "instanceLock": "此 {{info}} 操作無法執行，因為實例處於鎖定狀態，請稍後再試.",
+    "instanceBusy": "當前實例正處於忙碌狀態，無法執行任何操作.",
+    "info": "信息",
+    "error": "錯誤",
+    "autoRestart": "檢測到實例關閉，根據主動事件機制，自動重啟指令已發出...",
+    "autoRestartErr": "自動重啟錯誤: {{err}}",
+    "instantExit": "檢測到實例啟動後在極短的時間內退出，原因可能是您的啟動命令錯誤或配置文件錯誤."
+  },
+  "preset": {
+    "actionErr": "預設命令 {{action}} 不可用"
+  },
+
+  "process_config": {
+    "writEmpty": "寫入內容為空，可能是配置文件類型不支持"
+  },
+  "mc_update": {
+    "updateInstance": "更新實例....."
+  },
+  "auth_router": {
+    "notAccess": "會話 {{id}}({{address}}) 試圖無權限訪問 {{event}} 現已阻止.",
+    "illegalAccess": "非法訪問",
+    "access": "會話 {{id}}({{address}}) 驗證身份成功",
+    "disconnect": "會話 {{id}}({{address}}) 因長時間未驗證身份而斷開連接"
+  },
+  "environment_router": {
+    "dockerInfoErr": "無法獲取鏡像信息，請確保您已正確安裝Docker環境",
+    "crateImage": "守護進程正在創建鏡像 {{name}}:{{tag}} DockerFile 如下:\n{{dockerFileText}}\n",
+    "crateSuccess": "創建鏡像 {{name}}:{{tag}} 完畢",
+    "crateErr": "創建鏡像 {{name}}:{{tag}} 錯誤:{{error}}",
+    "delImage": "守護進程正在刪除鏡像 {{imageId}}"
+  },
+  "file_router": {
+    "instanceNotExist": "實例 {{instanceUuid}} 不存在",
+    "unzipLimit": "超出最大同時解壓縮任務量，最大准許{{maxFileTask}}個，目前有{{fileLock}}個任務正在進行，請耐心等待"
+  },
+  "http_router": {
+    "instanceNotExist": "實例不存在",
+    "fileNameNotSpec": "用戶文件下載名不符合規範",
+    "downloadErr": "下載出錯: {{error}}",
+    "updateErr": "未知原因: 上傳失敗"
+  },
+  "Instance_router": {
+    "requestIO": "會話 {{id}} 請求轉發實例 {{targetInstanceUuid}} IO 流",
+    "cancelIO": "會話 {{id}} 請求取消轉發實例 {{targetInstanceUuid}} IO 流",
+    "openInstanceErr": "實例{{instanceUuid}}啟動時錯誤: ",
+    "performTasks": "會話 {{id}} 要求實例 {{uuid}} 執行異步 {{taskName}} 異步任務",
+    "performTasksErr": "實例 {{uuid}} {{taskName}} 異步任務執行異常: {{err}}",
+    "taskEmpty": "無異步任務正在運行",
+    "accessFileErr": "文件不存在或路徑錯誤，文件訪問被拒絕",
+    "terminalLogNotExist": "終端日誌文件不存在"
+  },
+  "passport_router": {
+    "registerErr": "不可定義任務名或密鑰為空"
+  },
+  "stream_router": {
+    "IGNOREAccess": "非法訪問",
+    "taskNotExist": "任務不存在",
+    "instanceNotExist": "實例不存在",
+    "authSuccess": "會話 {{id}} {{address}} 數據流通道身份驗證成功",
+    "establishConnection": "會話 {{id}} {{address}} 已與 {{uuid}} 建立數據通道",
+    "disconnect": "會話 {{id}} {{address}} 已與 {{uuid}} 斷開數據通道",
+    "unauthorizedAccess": "非法訪問"
+  },
+  "file_router_service": {
+    "instanceNotExit": "實例 {{uuid}} 不存在"
+  },
+  "install": {
+    "ptyNotSupportSystem": "仿真終端只能支持 Windows/Linux x86_64 架構，已自動降級為普通終端",
+    "ptySupport": "識別到可選依賴庫安裝，仿真終端功能已可用",
+    "skipInstall": "檢測到系統不是 Linux 系統，自動跳過依賴庫安裝",
+    "installed": "可選依賴程序已自動安裝，仿真終端和部分高級功能已自動啟用",
+    "guide": "依賴程序參考：https://github.com/mcsmanager/pty",
+    "changeModeErr": "修改文件 {{path}} 權限失敗，請手動設置其為 chmod 755 以上",
+    "installErr": "安裝可選依賴庫失敗，全仿真終端和部分可選功能將無法使用，不影響正常功能，將在下次啟動時再嘗試安裝"
+  },
+  "protocol": {
+    "socketErr": "會話 {{id}}({{address}})/{{event}} 響應數據時異常:\n"
+  },
+  "router": {
+    "initComplete": "所有功能模塊與權限防火墻已初始化完畢"
+  },
+  "system_file": {
+    "illegalAccess": "非法訪問路徑",
+    "unzipLimit": "文件解壓縮只支持最大 {{max}}GB 文件的解壓縮，如需改變上限請前往 data/Config/global.json 文件",
+    "execLimit": "超出最大文件編輯限制"
+  },
+  "system_instance_control": {
+    "execLimit": "無法繼續創建計劃任務，以達到上限",
+    "existRepeatTask": "已存在重複的任務",
+    "illegalName": "非法的計劃名，僅支持下劃線，數字，字母和部分本地語言",
+    "crateTask": "創建計劃任務 {{name}}:\n{{task}}",
+    "crateTaskErr": "計劃任務創建錯誤，不正確的時間表達式: \n{{name}}: {{timeArray}}\n請嘗試刪除 data/TaskConfig/{{name}}.json 文件解決此問題",
+    "crateSuccess": "創建計劃任務 {{name}} 完畢",
+    "execCmdErr": "實例 {{uuid}} 計劃任務 {{name}} 執行錯誤: \n {{error}}"
+  },
+  "system_instance": {
+    "autoStart": "實例 {{name}} {{uuid}} 自動啟動指令已發出",
+    "autoStartErr": "實例 {{name}} {{uuid}} 自動啟動時錯誤: {{reason}}",
+    "readInstanceFailed": "讀取 {{uuid}} 應用實例失敗: {{error}}",
+    "checkConf": "請檢查或刪除文件：data/InstanceConfig/{{uuid}}.json",
+    "uuidEmpty": "無法新增某實例，因為實例UUID為空"
+  },
+  "ui": {
+    "help": "[終端] 守護進程擁有基本的交互功能，請輸入\"help\"查看更多信息"
+  },
+  "version": {
+    "versionDetectErr": "版本檢查失敗"
+  },
+  "quick_install": {
+    "unzipError": "解壓文件失敗",
+    "hiperError": "網絡映射進程已存在，不可重復啟動！"
+  },
+  "frp": {
+    "downloadErr": "下載 FRP 應用程序失敗，無法正常啟動 FRP 內網映射程序。",
+    "installing": "正在同時下載並安裝 FRP 內網映射程序，稍後我們將自動啟動映射功能...",
+    "done": "FRP 內網映射程序安裝完畢，您可以從左上角查看映射狀態，如果沒有顯示，則有可能是殺毒軟件攔截，文件權限不足，或者 FRP 密鑰錯誤。"
+  }
+}
