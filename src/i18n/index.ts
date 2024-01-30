@@ -17,7 +17,9 @@ i18next.init({
     },
     en_us: {
       translation: en_us
-    }
+    },
+    zh_tw: {
+      translation: zh_tw
   }
 });
 
